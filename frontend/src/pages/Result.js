@@ -16,7 +16,7 @@ export default function Result() {
   console.log(cartCount);
   const { data, isLoading, isError } = useQuery("Result", () =>
     sessionId
-      ? axios(`/api/checkout-sessions/${sessionId}`).then((res) => res.data)
+      ? axios(`https://football-fanatic.herokuapp.com/api/checkout-sessions/${sessionId}`).then((res) => res.data)
       : null
   );
 
