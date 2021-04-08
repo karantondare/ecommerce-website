@@ -20,7 +20,7 @@ export default function Navbar() {
         </Link>
         <div className="flex justify-between items-center	flex-col sm:flex-row">
           <CartSummary />
-          {/* <CheckoutCart /> */}
+          <CheckoutCart />
         </div>
       </div>
     </header>
