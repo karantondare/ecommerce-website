@@ -6,7 +6,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 export default function ProductList() {
   const { data: products, isLoading } = useQuery("Products", () =>
-    axios("/api/products").then((res) => res.data.products)
+    axios("https://football-fanatic.herokuapp.com/api/products").then((res) => res.data.products)
   );
 
   if (isLoading) return <CircularProgress color="secondary" />;
