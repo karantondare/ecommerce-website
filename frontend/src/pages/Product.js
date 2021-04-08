@@ -12,7 +12,7 @@ export default function Product() {
   const { productId } = useParams();
   const [selectedSize, setSelectedSize] = useState("");
   console.log(selectedSize);
-  const { data: product, isLoading, isError, error } = useQuery(
+  const { data: product, isLoading, error } = useQuery(
     ["Product", "productId"],
     () => axios(`/api/products/${productId}`).then((res) => res.data.product)
   );
