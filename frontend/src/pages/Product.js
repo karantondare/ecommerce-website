@@ -14,7 +14,7 @@ export default function Product() {
   console.log(selectedSize);
   const { data: product, isLoading, error } = useQuery(
     ["Product", "productId"],
-    () => axios(`/api/products/${productId}`).then((res) => res.data.product)
+    () => axios(`https://football-fanatic.herokuapp.com/api/products/${productId}`).then((res) => res.data.product)
   );
 
   if (isLoading) return <LoadingSpinner />;
